@@ -1,0 +1,83 @@
+:root {
+    --bg-yellow: #FFFFA8;
+    --header-bg-yellow: #F0F0F0;
+    --text-yellow: #A4A400;
+}
+
+.container {
+    color: #404040;
+    font-size: 11pt;
+    font-family: "Georgia", "Garamond";
+    background: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+}
+
+.text-center{
+    text-align: center;
+}
+
+.section-header {
+    font-family: "Lucida Sans Unicode", "Helvetica", "Arial";
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: normal;
+    letter-spacing: 0.25em;
+}
+
+.section-header > span {
+    background: var(--header-bg-yellow);
+}
+
+ul li {
+    list-style-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/pie_icon.gif);
+}
+
+.header {
+    font-size: 22pt;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.section-header, .external-link {
+    color: var(--text-yellow);
+}
+
+.validators, .copyright-section {
+    float: right;
+}
+
+.copyright-section {
+    margin-top: 2rem;
+}
+.copyright {
+    padding-top: 2rem;
+}
+
+.bg-yellow {
+    background: var(--bg-yellow);
+}
+
+.testimonial {
+    margin: 0 3rem;
+}
+.ingredients-section {
+    margin: 2rem 0;
+}
+.ingredients-section p {
+    margin: 0.3rem 0;
+}
