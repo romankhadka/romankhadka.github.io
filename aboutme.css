@@ -1,0 +1,111 @@
+html {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.upcase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body {
+    background: grey;
+    background: linear-gradient(90deg, #b9deed, #efefef);
+}
+
+.container {
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+}
+
+.profile-section {
+    margin: 0 auto;
+    background: aliceblue;
+    width: 60%;
+    padding: 4rem;
+    border-radius: 5px;
+    box-shadow: 10px 0px 54px -28px rgba(0, 0, 0, 1);
+    color: dimgrey;
+}
+
+
+.header-section {
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.header {
+    color: darkslategrey;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-family: "Courier New", Verdana;
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+
+.description {
+    font-size: 1.2rem;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+
+.classes-section, .movies-section, .facts-section, .moods-section {
+    padding: 4rem;
+    max-width: 40rem;
+}
+
+.classes-section, .movies-section {
+    padding-bottom: 1rem;
+}
+
+.movies-section {
+    padding-top: 0;
+}
+
+.list {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    font-family: Palatino;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.section-header {
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.external-link {
+    text-decoration: none;
+    color: lightslategrey;
+}
+
+.external-link:hover {
+    color: cornflowerblue;
+}
+
+.emoticon {
+    width: 100px;
+    margin: 0 2rem;
+    filter: opacity(0.6);
+}
+
+.happy .emoticon {
+    width: 105px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
