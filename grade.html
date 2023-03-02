@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <link href="grade.css" rel="stylesheet"/>
+    <title>Retrieve Grade</title>
+</head>
+<body>
+<form action="https://mumstudents.org/params.php" method="GET" class="grade-form">
+    <div class="form-field">
+        <label for="name" class="text-field-label">Student Name</label>
+        <input type="text" name="name" class="text-field" required/>
+    </div>
+    <div class="form-field">
+        <label for="id" class="text-field-label">Student ID</label>
+        <input type="text" name="id" class="text-field" required/>
+    </div>
+    <div class="form-field">
+        <label for="assignment" class="text-field-label">Assignment</label>
+        <select name="assignment" class="text-field">
+            <option value="" disabled selected>Select an option</option>
+            <option value="assignment1">Assignment 1</option>
+            <option value="assignment2">Assignment 2</option>
+            <option value="assignment3">Assignment 3</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="entry">Entry</label>
+        <input type="radio" name="entry" value="april22"/> <span class="entry">April '22</span>
+        <input type="radio" name="entry" value="august22"/> <span class="entry">August '22</span>
+        <input type="radio" name="entry" value="november22"/> <span class="entry">November '22</span>
+        <input type="radio" name="entry" value="january23" checked/> <span class="entry">January '23</span>
+    </div>
+    <div class="form-field">
+        <input type="checkbox" name="verification"> I verify that I am looking up my own grade.
+    </div>
+    <div class="btn-section">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Get Grade!">
+    </div>
+</form>
+</body>
+</html>
+
+
+
