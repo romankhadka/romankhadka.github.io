@@ -1,0 +1,101 @@
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #effff0, #ffe2e5);
+}
+
+* {
+    font-family: Monospace;
+    font-size: 16px;
+}
+
+.signup-form {
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-field {
+    margin: 1.5rem;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 0.3rem 0.8rem;
+    border: 0.5px solid #b9deed;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    transform: scaleX(1.2);
+    opacity: 0.9;
+}
+
+input[type="submit"] {
+    background: #effff0;
+}
+
+input[type="reset"] {
+    background: #ffe2e5;
+}
+
+.text-field-label {
+    display: inline-block;
+    width: 200px;
+}
+
+.text-field {
+    display: inline-block;
+    width: 200px;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+label {
+    font-weight: bold;
+}
+
+fieldset {
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 6px 5px 30px -3px rgba(0, 0, 0, 0.75);
+    background: lavender;
+}
+
+fieldset > legend {
+    background: white;
+    border: 1px solid dimgrey;
+    padding: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.58);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background: lightpink;
+    font-size: 20px;
+}
+
+.personality-link {
+    text-decoration: none;
+    color: palevioletred;
+}

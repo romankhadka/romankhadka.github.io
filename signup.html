@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link href="signup.css" rel="stylesheet"/>
+</head>
+<body>
+<form action="https://mumstudents.org/params.php" method="GET" class="signup-form">
+    <fieldset>
+        <legend>New User Signup:</legend>
+        <div class="form-field">
+            <label for="name" class="text-field-label">Name: </label>
+            <input type="text" name="name" class="text-field" required maxlength="16"/>
+        </div>
+        <div class="form-field">
+            <label for="gender" class="text-field-label">Gender:</label>
+            <input type="radio" name="gender" value="male"/> <span class="entry">Male</span>
+            <input type="radio" name="gender" value="female" checked/> <span class="entry">Female</span>
+        </div>
+
+        <div class="form-field">
+            <label for="age" class="text-field-label">Age: </label>
+            <input type="text" name="age" class="text-field w-25" maxlength=99 required/>
+        </div>
+
+        <div class="form-field">
+            <label for="personality_type" class="text-field-label">Personality Type: </label>
+            <input type="text" name="personality_type" class="text-field w-25" required/>
+            <span>(<a href="https://www.humanmetrics.com/personality/test" class="personality-link">Don't know your type?</a>)</span>
+        </div>
+
+        <div class="form-field">
+            <label for="os" class="text-field-label">Favorite OS: </label>
+            <select name="os" class="text-field w-35">
+                <option value="windows" selected="">Windows</option>
+                <option value="macintosh">Macintosh</option>
+                <option value="linux">Linux</option>
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label for="seeking_age" class="text-field-label">Seeking age:</label>
+            <input type="text" class="w-10 text-field" name="seeking_age_from" placeholder="From" maxlength="2"
+                   required>
+            to
+            <input type="text" class="w-10 text-field" name="seeking_age_to" placeholder="To" maxlength="2" required>
+        </div>
+        <div class="btn-section">
+            <input type="submit" value="Sign Up" class="bold">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
+
+
+
