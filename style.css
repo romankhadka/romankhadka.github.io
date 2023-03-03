@@ -18,7 +18,6 @@ body {
 }
 
 .container {
-    /*background: lightgrey;*/
     height: 90vh;
     text-align: center;
     display: flex;
@@ -29,13 +28,11 @@ body {
 
 .profile-section {
     margin: 0 auto;
-    height: 65%;
     background: aliceblue;
     width: 90%;
     padding-top: 8rem;
     border-radius: 5px;
     box-shadow: 10px 0px 54px -28px rgba(0, 0, 0, 1);
-    /*margin: 0 auto;*/
 }
 
 .profile-image {
