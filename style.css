@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    height: 90vh;
+    height: 92vh;
     text-align: center;
     display: flex;
     align-items: flex-end;
@@ -71,15 +71,26 @@ body {
     transform: scale(1.2);
 }
 
-.assignments-section > ul {
+.assignments-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.assignments-section div {
+    max-width: 15rem;
+    text-align: left;
+}
+
+.assignments-section ul {
     list-style: none;
     margin-top: 2rem;
 }
-.assignments-section > ul:hover {
+.assignments-section ul:hover {
     letter-spacing: 2px;
 }
 
-.assignments-section > ul > li > a {
+.assignments-section ul > li > a {
     padding-right: 3rem;
     text-decoration: none;
     color: #3c484d;
