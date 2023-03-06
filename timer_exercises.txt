@@ -1,0 +1,59 @@
+1. What is the difference between the following 2 statements?
+setTimeout(booyah, 2000);
+setTimeout(booyah(), 2000);
+
+A:
+The booyah function will be called after a delay of 2000 milliseconds thanks to the first statement setTimeout(booyah, 2000). (
+2 seconds). When the booyah function is supplied to setTimeout as a reference, it is scheduled to run after the specified delay rather than being called immediately.
+
+The booyah function is immediately called in the second sentence setTimeout(booyah(), 2000), and its return value is supplied as an argument to setTimeout.
+This indicates that the booyah function will be called right away, and setTimeout will get the value it returns as an input.
+The setTimeout call will not succeed if booyah returns nothing since it expects a function as its first argument.
+
+2. What do the following 2 alerts display (answer without running the code)?
+var myfunc = function(a, x) {
+ return a * x;
+};
+var x = myfunc(2, 3);
+var y = myfunc;
+alert(x);
+alert(y(2,3));
+
+A:
+The first alert will display the result of myfunc(2, 3), which is 6.
+The second alert will also display 6, but the way it gets there is a bit different.
+Here, the variable y is assigned the value of the function myfunc.
+So when y(2, 3) is called, it's the same as calling myfunc(2, 3), which also returns 6.
+
+
+3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that
+says “BOOYAH!”
+setTimeout(booyah1, 2000);
+setTimeout(booyah2(), 2000);
+
+A:
+Here are two possible ways to define the booyah1 and booyah2 functions:
+
+//using a function declaration
+function booyah1() {
+  alert('BOOYAH!');
+}
+
+//using an anonymous function expression
+var booyah2 = function() {
+  alert('BOOYAH!');
+};
+With these functions defined, we can use them in setTimeout calls to display an alert after a delay of 2 seconds as follows:
+
+// Call setTimeout with booyah1
+setTimeout(booyah1, 2000);
+
+// Call setTimeout with booyah2
+setTimeout(booyah2, 2000);
+In both cases, an alert box will appear after a delay of 2 seconds, displaying the message "BOOYAH!".
+
+4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+for using it)?
+Creating more accessible, maintainable, and scalable web pages is a practical use for unobtrusive JavaScript.
+The accessibility of online pages for people who use assistive technology like screen readers can also be improved via unobtrusive JavaScript.
+Also, code maintenance and reuse are made simpler by isolating behavior from structure and presentation, which reduces problems and speeds up development times.
