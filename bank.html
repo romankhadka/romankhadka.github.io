@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="bank.css"/>
+</head>
+<body>
+
+<div class="main" id="mainPage">
+    <h2>Bank Account App</h2>
+    <form>
+        <input type="text" name="accountname" class="input-field" placeholder="Account Name"/>
+        <input type="number" min="0" name="deposit" class="input-field" placeholder="Initial Deposit"/>
+        <input type="button" id="btn-create" value="Create Account"/>
+        <input type="button" id="btn-deposit" value="Deposit"/>
+        <input type="button" id="btn-withdraw" value="Withdraw"/>
+    </form>
+
+    <div id="accountInfoList">
+
+    </div>
+
+</div>
+
+<div class="main hidden" id="depositPage">
+    <h2>Deposit</h2>
+    <div class="closeForm">X</div>
+
+    <form>
+        <select name="accounts" class="accountList" id="depositAccount">
+            <option value=""></option>
+        </select>
+        <br>
+        <input type="number" min="0" name="deposit" class="input-field" id="newDepositField"
+               placeholder="Deposit Amount"/>
+        <input type="button" id="newDeposit" value="Deposit Amount"/>
+    </form>
+
+</div>
+
+<div class="main hidden" id="withdrawPage">
+    <h2>Withdraw</h2>
+    <form>
+        <div class="closeForm">X</div>
+        <h2>Deposit</h2>
+            <select name="accounts" class="accountList" id="withdrawAccount">
+        </select>
+        <br>
+        <input type="number" min="0" name="deposit" class="input-field" id="newWithdrawField"
+               placeholder="Withdraw Amount"/>
+        <input type="button" id="newWithdraw" value="Withdraw Amount"/>
+    </form>
+
+</div>
+
+<script src="bank.js"></script>
+</body>
+</html>

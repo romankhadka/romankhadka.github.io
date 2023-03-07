@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    width: 450px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #eee;
+    text-align: center;
+}
+
+.input-field {
+    width: 80%;
+}
+
+#btn-create {
+    background-color: #0096ff;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#btn-deposit {
+    background-color: #0096ff;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#btn-withdraw {
+    background-color: #0096ff;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+
+.accountList {
+    width: 85%;
+    height: 40px;
+    border: 2px solid black;
+}
+
+#depositPage, #withdrawPage {
+    position: relative;
+}
+
+.closeForm {
+    right: 2rem;
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
