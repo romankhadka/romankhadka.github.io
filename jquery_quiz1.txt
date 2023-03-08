@@ -1,0 +1,37 @@
+1. In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?
+A:
+The $() or jQuery() function, which is used to generate a jQuery object, is referred to as the "jQuery function".
+jQuery(selector) or $(selector), where the selector is a CSS-style selector that matches one or more DOM elements, are essentially shorthand ways of writing those expressions.
+The object that the jQuery function returns when it is called with a selector is referred to as the "jQuery object".
+A group of DOM elements that match the selection are contained in this object, which is an instance of the jQuery class.
+So, a jQuery object, which is a collection of DOM components that can be modified using jQuery methods, is created by the jQuery function.
+A jquery function is used to create a jquery object.
+
+
+2. Write jQuery code to find all h1 elements that are children of a div element and make their background
+   color red.
+   Sample HTML:
+   <body>
+   <h1>abc</h1><br><div>
+    <h1>div-1</h1>
+    <h1>div-2</h1>
+    </div>
+    <h1>xyz</h1>
+   </body>
+A:
+$("div h1").css("background-color", "red");
+
+3. 3. Use a jQuery method to insert the text "YES!" at the end of the <p> element.
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <script>
+   <!—INSERT YOUR JQUERY CODE HERE - - >
+   </script>
+   </head>
+   <body>
+   <p>Is jQuery FUN or what? </p>
+   </body>
+   </html>
+A:
+$("p").append("YES!");
