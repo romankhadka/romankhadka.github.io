@@ -2,7 +2,7 @@ $(document).ready(() => {
     var puzzlePieces = $$("#puzzlearea div");
     var puzzleArea = $('#puzzlearea');
     var divs = $(puzzleArea).find("div");
-    $('#puzzlearea').append($('<div id="emptySpace"></div>'));
+    $('#puzzlearea').append($('<div id="emptySpace" data-position="16"></div>'));
     $('#emptySpace').css({
         'left': '300px',
         'top': '300px',
@@ -12,11 +12,9 @@ $(document).ready(() => {
         'border': '5px solid black'
     });
 
-    // initialize each piece
     for (var i = 0; i < divs.length; i++) {
         var div = divs[i];
 
-        // calculate x and y for this piece
         var x = ((i % 4) * 100);
         var y = (Math.floor(i / 4) * 100);
 
@@ -69,23 +67,22 @@ $(document).ready(() => {
     }
 
     function movePiece(piece) {
-        let emptySpace = $('#emptySpace')[0];
         let top = parseInt(piece.style.top);
         let left = parseInt(piece.style.left);
+        let pos = piece.dataset.position;
+
+        let emptySpace = $('#emptySpace')[0];
         let emptyTop = parseInt(emptySpace.style.top);
         let emptyLeft = parseInt(emptySpace.style.left);
+        let emptyPos = emptySpace.dataset.position;
 
-
-        if (top === emptyTop && (left - 100 === emptyLeft || left + 100 === emptyLeft)) {
+        if ((top === emptyTop && (left - 100 === emptyLeft || left + 100 === emptyLeft)) || (left === emptyLeft && (top - 100 === emptyTop || top + 100 === emptyTop))) {
             emptySpace.style.top = `${top}px`;
             emptySpace.style.left = `${left}px`;
+            emptySpace.dataset.position = pos;
             piece.style.top = `${emptyTop}px`;
             piece.style.left = `${emptyLeft}px`;
-        } else if (left === emptyLeft && (top - 100 === emptyTop || top + 100 === emptyTop)) {
-            emptySpace.style.top = `${top}px`;
-            emptySpace.style.left = `${left}px`;
-            piece.style.top = `${emptyTop}px`;
-            piece.style.left = `${emptyLeft}px`;
+            piece.dataset.position = emptyPos;
         }
 
         checkIfGameWon();
@@ -94,28 +91,16 @@ $(document).ready(() => {
     function checkIfGameWon() {
         let currentPos = 1;
         let gameWon = true;
-        $("#puzzlearea div").each((_ind, piece) => {
-            if($(div).attr('id')!='emptySpace' && _ind!=15) {
-                console.log('######################');
-                console.log(piece);
-                console.log(!!currentPos);
-                console.log(!piece.dataset.position);
-                console.log(!!currentPos && !piece.dataset.position);
-                console.log(piece.dataset.position != currentPos);
-                console.log(currentPos);
-                console.log(_ind);
-                console.log('######################');
 
-                if ((!!currentPos && !piece.dataset.position) || piece.dataset.position != currentPos) {
-                    gameWon = false;
-                }
-                currentPos++;
-            } else if($(div).attr('id') == 'emptySpace' && _ind<15) {
-                gameWon=false;
+        $('#puzzlearea div').each((ind, piece) => {
+            if ((($(piece).attr('id') == 'emptySpace') && (ind != 15)) || (($(piece).attr('id') != 'emptySpace') && piece.dataset.position != currentPos)) {
+                gameWon = false;
             }
+            currentPos++;
         });
+
         if (gameWon) {
-            // alert("You won!");
+            setTimeout(() => alert('You won!'), 200);
         }
     }
 
